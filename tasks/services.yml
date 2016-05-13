@@ -3,17 +3,14 @@
 - name: Ensure Apache is running
   service: name=apache2 state=started
   tags:
-    - updates
-    - updates_apache
+    - services_apache
 
 - name: Ensure MySQL is running
   service: name=mysql state=started
   tags:
-    - updates
-    - updates_mysql
+    - services_mysql
 
 - name: Ensure Fail2Ban is running
   service: name=fail2ban state=started
   tags:
-    - updates
-    - updates_fail2ban
+    - services_fail2ban
